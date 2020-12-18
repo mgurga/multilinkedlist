@@ -70,8 +70,12 @@ public class mll {
 		return mll_prev;
 	}
 	
-	public void remove() {
-		
+	public void remove(boolean tocol) {
+		if(tocol) {
+			mll_prev.set_col(mll_col_next);
+		} else {
+			mll_prev.set_row(mll_row_next);
+		}
 	}
 	
 	public String toString() {
