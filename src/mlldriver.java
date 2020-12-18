@@ -23,5 +23,14 @@ public class mlldriver {
 		
 		// print head data and its children's data
 		System.out.println(head);
+		
+		// remove "bazrow" node (refer to the diagram) and replace with row
+		head.get_col_mll().get_row_mll().remove(false);
+		System.out.println();
+		System.out.println("Removed 'bazrow'");
+		System.out.println();
+		
+		// print head data and its children's data
+		System.out.println(head);
 	}
 }
