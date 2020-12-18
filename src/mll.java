@@ -50,11 +50,11 @@ public class mll {
 		mll_prev = newprev;
 	}
 	
-	public void setData(String newData) {
+	public void set_data(String newData) {
 		data = newData;
 	}
 	
-	public String getData() {
+	public String get_data() {
 		return data;
 	}
 	

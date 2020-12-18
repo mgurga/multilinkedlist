@@ -18,15 +18,18 @@ public class mlldriver {
 		head.get_col_mll().get_col_mll().new_row("bazcol2row");
 		
 		// create extended head->col->row nodes
-		head.get_col_mll().get_row_mll().new_col("bazcolrowcol");
-		head.get_col_mll().get_row_mll().new_row("bazcolrow2");
+		head.get_col_mll().get_row_mll().new_col();
+		head.get_col_mll().get_row_mll().get_col_mll().set_data("bazcolrowcol");
+		head.get_col_mll().get_row_mll().new_row();
+		head.get_col_mll().get_row_mll().get_row_mll().set_data("bazcolrow2");
 		
 		// print head data and its children's data
 		System.out.println(head);
 		
 		// remove "bazrow" node (refer to the diagram) and replace with row
-		head.get_col_mll().get_row_mll().remove(false);
 		System.out.println();
+		System.out.println("'bazrow' data: " + head.get_col_mll().get_row_mll().get_data());
+		head.get_col_mll().get_row_mll().remove(false);
 		System.out.println("Removed 'bazrow'");
 		System.out.println();
 		
